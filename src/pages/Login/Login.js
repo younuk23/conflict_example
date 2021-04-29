@@ -1,15 +1,22 @@
 import React from "react";
-import "./Login.css";
+import { withRouter } from "react-router-dom";
+import "./Login.scss";
 
 class Login extends React.Component {
+  goToMain = () => {
+    this.props.history.push("/main");
+  };
+
   render() {
     return (
       <div className="Login">
-        <button onClick={() => alert("안녕하세요")}>Click Me</button>
-        <h1 className="title">Hello Wolrd</h1>
+        <h1 className="title" onClick={this.goToMain}>
+          Westagram
+        </h1>
+        <button>Go To Main</button>
       </div>
     );
   }
 }
 
-export default Login;
+export default withRouter(Login);
