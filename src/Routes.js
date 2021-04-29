@@ -6,6 +6,7 @@ import Main from "./pages/Main/Main";
 
 class Routes extends React.Component {
   render() {
+    console.log("메인 작업물");
     return (
       <Router>
         <Switch>
